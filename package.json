@@ -1,0 +1,33 @@
+{
+  "name": "angulartics-inspectlet",
+  "version": "0.1.0",
+  "description": "Inspectlet plugin for Angulartics",
+  "keywords": [
+    "inspectlet",
+    "analytics",
+    "plugin",
+    "angular",
+    "angulartics"
+  ],
+  "author": "Giorgio Delle Grottaglie <giorgiodg@gmail.com> (https://github.com/geordie--)",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "build": "mkdir -p dist && uglifyjs lib/angulartics-inspectlet.js --compress --source-map dist/angulartics-inspectlet.min.js.map --source-map-root .. --source-map-url ../dist/angulartics-inspectlet.min.js.map -o dist/angulartics-inspectlet.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angulartics/angulartics-inspectlet"
+  },
+  "bugs": {
+    "url": "https://github.com/angulartics/angulartics-inspectlet/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "angulartics": "~0.20"
+  },
+  "devDependencies": {
+    "uglify-js": "^2.4.23"
+  }
+}
